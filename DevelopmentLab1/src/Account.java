@@ -43,6 +43,7 @@ public class Account {
 	   public void withdraw(int deposit) {
 		   int temp;
 	    	temp = getBalance()-deposit;
+	    	temp++;
 	    	setBalance(temp);
 	   }
 
