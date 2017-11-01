@@ -42,24 +42,24 @@ public class StateMachine {
 		    	String st2 = s.substring(i,i+1);
 		   
 		    			if(st2.indexOf("0") >= 0 || st2.indexOf("1") >= 0) {
-		    						if(st2.indexOf("0") >= 0) {
-		    								if(whereState == 1) {
-		    									setState1(false);
-		    									setState2(false);
-		    									setState3(true);
-		    									whereState = 3;
+		    				if(st2.indexOf("0") >= 0) {
+		    						if(whereState == 1) {
+		    								setState1(false);
+		    								setState2(false);
+		    								setState3(true);
+		    								whereState = 3;
+		    							}
+		    						else if(whereState == 2) {
+		    								setState1(false);
+		    								setState2(true);
+		    								setState3(false);
+		    								whereState = 2;
 		    								}
-		    								else if(whereState == 2) {
-		    									setState1(false);
-		    									setState2(true);
-		    									setState3(false);
-		    									whereState = 2;
-		    								}
-		    								else if(whereState == 3) {
-		    									setState1(false);
-		    									setState2(true);
-		    									setState3(false);
-		    									whereState = 2;
+		    						else if(whereState == 3) {
+		    								setState1(false);
+		    								setState2(true);
+		    								setState3(false);
+		    								whereState = 2;
 		    								}
 		    						}
 		    						else{
